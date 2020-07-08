@@ -368,11 +368,11 @@
 					var part = event.target.dataset.part;
 					var weight = event.target.dataset.weight;			
 
-					$('#set > [data-part="' + part + '"] > img').attr("src", event.target.src);
+					$('#set > [data-part="' + part + '"] > td > img').attr("src", event.target.src);
 
-					$('#set > [data-part="' + part + '"] > .weight').html(weight);
-					$('#set > [data-part="' + part + '"] > .physical').html(physical);
-					$('#set > [data-part="' + part + '"] > .elemental').html(elemental);
+					$('#set > [data-part="' + part + '"] > td > .weight').html(weight);
+					$('#set > [data-part="' + part + '"] > td > .physical').html(physical);
+					$('#set > [data-part="' + part + '"] > td > .elemental').html(elemental);
 
 					console.log(event);
 				});
