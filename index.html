@@ -358,47 +358,47 @@
 				});
 
 				$("#sets").click(function (event) {
+					if (event.target.nodeName == "IMG") {
+						var set = event.target.parentElement.dataset.set;
+						var physical = event.target.parentElement.dataset.physical;
+						var elemental = event.target.parentElement.dataset.elemental;
 
-					var set = event.target.parentElement.dataset.set;
-					var physical = event.target.parentElement.dataset.physical;
-					var elemental = event.target.parentElement.dataset.elemental;
+						var part = event.target.dataset.part;
+						var weight = event.target.dataset.weight;
 
-					var part = event.target.dataset.part;
-					var weight = event.target.dataset.weight;
-
-					$('#sets').find('[data-part="' + part + '"]').css('border', 0);
-					event.target.style.border = 'solid 3px';
+						$('#sets').find('[data-part="' + part + '"]').css('border', 0);
+						event.target.style.border = 'solid 3px';
 
 
-					$('#set > [data-part="' + part + '"] > td > img').attr("src", event.target.src);
+						$('#set > [data-part="' + part + '"] > td > img').attr("src", event.target.src);
 
-					$('#set > [data-part="' + part + '"] > .weight').html(weight);
-					$('#set > [data-part="' + part + '"] > .physical').html(physical + '%');
-					$('#set > [data-part="' + part + '"] > .elemental').html(elemental + '%');
+						$('#set > [data-part="' + part + '"] > .weight').html(weight);
+						$('#set > [data-part="' + part + '"] > .physical').html(physical + '%');
+						$('#set > [data-part="' + part + '"] > .elemental').html(elemental + '%');
 
-					$('#set > [data-part="' + part + '"]').data('weight', weight);
-					$('#set > [data-part="' + part + '"]').data('physical', physical);
-					$('#set > [data-part="' + part + '"]').data('elemental', elemental);
+						$('#set > [data-part="' + part + '"]').data('weight', weight);
+						$('#set > [data-part="' + part + '"]').data('physical', physical);
+						$('#set > [data-part="' + part + '"]').data('elemental', elemental);
 
-					var parts = $('#set > tr');
-					var total = { w: 0, p: 0, e: 0 };
+						var parts = $('#set > tr');
+						var total = { w: 0, p: 0, e: 0 };
 
-					for (var i = 0; i < parts.length; i++) {
-						if ($(parts[i]).data('weight'))
-							total.w += Number($(parts[i]).data('weight'));
-						if ($(parts[i]).data('physical'))
-							total.p += Number($(parts[i]).data('physical'));
-						if ($(parts[i]).data('elemental'))
-							total.e += Number($(parts[i]).data('elemental'));
+						for (var i = 0; i < parts.length; i++) {
+							if ($(parts[i]).data('weight'))
+								total.w += Number($(parts[i]).data('weight'));
+							if ($(parts[i]).data('physical'))
+								total.p += Number($(parts[i]).data('physical'));
+							if ($(parts[i]).data('elemental'))
+								total.e += Number($(parts[i]).data('elemental'));
+						}
+
+						total.p = total.p / 5;
+						total.e = total.e / 5;
+
+						$('#total > tr > .weight').html(total.w);
+						$('#total > tr > .physical').html(total.p + '%');
+						$('#total > tr > .elemental').html(total.e + '%');
 					}
-
-					total.p = total.p / 5;
-					total.e = total.e / 5;
-
-					$('#total > tr > .weight').html(total.w);
-					$('#total > tr > .physical').html(total.p + '%');
-					$('#total > tr > .elemental').html(total.e + '%');
-
 				});
 
 
