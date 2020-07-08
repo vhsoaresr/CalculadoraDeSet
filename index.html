@@ -210,13 +210,46 @@
 								<h3 class="card-title"><i class="tim-icons icon-puzzle-10 text-primary"></i>Cálculo</h3>
 							</div>
 							<div class="card-body">
+								<table class="table tablesorter " id="">
+									<thead class=" text-primary">
+										<tr>
+											<th>
+												Set
+											</th>
+											<th>
+												Peso
+											</th>
+											<th>
+												Fisico
+											</th>
+											<th class="text-center">
+												Elemental
+											</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr data-part="head">
+											<td>
+												<img />
+											</td>
+											<td>
+												<span class="weight"></span>
+											</td>
+											<td>
+												<span class="physical"></span>
+											</td>
+											<td>
+												<span class="elemental"></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+
+
+
 								<div class="col-lg-6">
 									<div class="col-lg-3" id="set">
-										<img data-part="head" />
-										<img data-part="chest" />
-										<img data-part="hands" />
-										<img data-part="legs" />
-										<img data-part="foot" />
+
 									</div>
 								</div>
 							</div>
@@ -278,34 +311,20 @@
 					}, 1000);
 				});
 
-
-				/// VALORES SETS
-				var duelist = {
-					physical: 23,
-					elemental: 77,
-					head: {
-						weight: 2
-					},
-					chest: {
-						weight: 3
-					},
-					hands: {
-						weight: 1.5
-					},
-					legs: {
-						weight: 2
-					},
-					foot: {
-						weight: 1.5
-					}
-				};
-
 				$("#sets").click(function (event) {
+			
+					var set = event.target.parentElement.dataset.set;
+					var physical = event.target.parentElement.dataset.physical;
+					var elemental = event.target.parentElement.dataset.elemental;
 
 					var part = event.target.dataset.part;
-					var set = event.target.dataset.set;
+					var weight = event.target.dataset.weight;			
 
-					$('#set > [data-part="' + part + '"]').attr("src", event.target.src);
+					$('#set > [data-part="' + part + '"] > img').attr("src", event.target.src);
+
+					$('#set > [data-part="' + part + '"] > .weight').html(weight);
+					$('#set > [data-part="' + part + '"] > .physical').html(physical);
+					$('#set > [data-part="' + part + '"] > .elemental').html(elemental);
 
 					console.log(event);
 				});
