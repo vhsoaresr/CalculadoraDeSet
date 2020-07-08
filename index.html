@@ -230,72 +230,57 @@
 									<tbody id="set">
 										<tr data-part="head">
 											<td>
-												<img />
+												<img width="150px" />
 											</td>
-											<td>
-												<span class="weight"></span>
+											<td class="weight">
 											</td>
-											<td>
-												<span class="physical"></span>
+											<td class="physical">
 											</td>
-											<td>
-												<span class="elemental"></span>
+											<td class="elemental">
 											</td>
 										</tr>
 										<tr data-part="chest">
 											<td>
-												<img />
+												<img width="150px" />
 											</td>
-											<td>
-												<span class="weight"></span>
+											<td class="weight">
 											</td>
-											<td>
-												<span class="physical"></span>
+											<td class="physical">
 											</td>
-											<td>
-												<span class="elemental"></span>
+											<td class="elemental">
 											</td>
 										</tr>
 										<tr data-part="hands">
 											<td>
-												<img />
+												<img width="150px" />
 											</td>
-											<td>
-												<span class="weight"></span>
+											<td class="weight">
 											</td>
-											<td>
-												<span class="physical"></span>
+											<td class="physical">
 											</td>
-											<td>
-												<span class="elemental"></span>
+											<td class="elemental">
 											</td>
 										</tr>
 										<tr data-part="legs">
 											<td>
-												<img />
+												<img width="150px" />
 											</td>
-											<td>
-												<span class="weight"></span>
+											<td class="weight">
 											</td>
-											<td>
-												<span class="physical"></span>
+											<td class="physical">
 											</td>
-											<td>
-												<span class="elemental"></span>
+											<td class="elemental">
 											</td>
 										</tr>
 										<tr data-part="foot">
 											<td>
-												<img />
+												<img  width="150px" />
 											</td>
-											<td>
-												<span class="weight"></span>
+											<td class="weight">
 											</td>
-											<td>
-												<span class="physical"></span>
+											<td class="physical">
 											</td>
-											<td>
-												<span class="elemental"></span>
+											<td class="elemental">
 											</td>
 										</tr>
 									</tbody>
@@ -370,9 +355,9 @@
 
 					$('#set > [data-part="' + part + '"] > td > img').attr("src", event.target.src);
 
-					$('#set > [data-part="' + part + '"] > td > .weight').html(weight);
-					$('#set > [data-part="' + part + '"] > td > .physical').html(physical);
-					$('#set > [data-part="' + part + '"] > td > .elemental').html(elemental);
+					$('#set > [data-part="' + part + '"] > .weight').html(weight);
+					$('#set > [data-part="' + part + '"] > .physical').html(physical);
+					$('#set > [data-part="' + part + '"] > .elemental').html(elemental);
 
 					console.log(event);
 				});
