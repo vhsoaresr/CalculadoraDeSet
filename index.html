@@ -376,14 +376,14 @@
 					$('#set > [data-part="' + part + '"] > .physical').html(physical + '%');
 					$('#set > [data-part="' + part + '"] > .elemental').html(elemental + '%');
 
-					$('#set > [data-part="' + part + '"]').data('weight', weight );
+					$('#set > [data-part="' + part + '"]').data('weight', weight);
 					$('#set > [data-part="' + part + '"]').data('physical', physical);
 					$('#set > [data-part="' + part + '"]').data('elemental', elemental);
 
 					var parts = $('#set > tr');
 					var total = { w: 0, p: 0, e: 0 };
 
-					for (var i in parts) {
+					for (var i = 0; i < parts.length; i++) {
 						total.w += Number($(parts[i]).data('weight'));
 						total.p += Number($(parts[i]).data('physical'));
 						total.e += Number($(parts[i]).data('elemental'));
