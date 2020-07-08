@@ -262,6 +262,8 @@
 				};
 
 				$("#sets").click(function (event) {
+					$('#set > [data-part="' + part + '"]').attr("src", event.target.src);
+
 					console.log(event);
 				});
 
