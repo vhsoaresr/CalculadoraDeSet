@@ -262,6 +262,10 @@
 				};
 
 				$("#sets").click(function (event) {
+
+					var part = event.target.dataset.part;
+					var set = event.target.dataset.set;
+
 					$('#set > [data-part="' + part + '"]').attr("src", event.target.src);
 
 					console.log(event);
