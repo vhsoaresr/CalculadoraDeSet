@@ -117,18 +117,50 @@
 			</div>
 			<!-- End Navbar -->
 			<div class="content">
-				<div class="row">
-					<div class="col-lg-4">
+				<div class="row" id="sets">
+					<div class="col-lg-2">
+						<div class="card card-chart">
+							<div class="card-header">
+								<h3 class="card-title"><i class="tim-icons icon-puzzle-10 text-primary"></i>Sage</h3>
+							</div>
+							<div class="card-body">
+								<img src="images/sage_head.png" id="sage_head" />
+								<img src="images/sage_chest.png" id="sage_chest" />
+								<img src="images/sage_hands.png" id="sage_hands" />
+								<img src="images/sage_legs.png" id="sage_legs" />
+								<img src="images/sage_foot.png" id="sage_foot" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2">
 						<div class="card card-chart">
 							<div class="card-header">
 								<h3 class="card-title"><i class="tim-icons icon-puzzle-10 text-primary"></i>Duelist</h3>
 							</div>
 							<div class="card-body">
-								<img src="images/duelist_head.png" />
-								<img src="images/duelist_chest.png" />
-								<img src="images/duelist_hands.png" />
-								<img src="images/duelist_legs.png" />
-								<img src="images/duelist_foot.png" />
+								<img src="images/duelist_head.png" id="duelist_head" />
+								<img src="images/duelist_chest.png" id="duelist_chest" />
+								<img src="images/duelist_hands.png" id="duelist_hands" />
+								<img src="images/duelist_legs.png" id="duelist_legs" />
+								<img src="images/duelist_foot.png" id="duelist_foot" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="card card-chart">
+							<div class="card-header">
+								<h3 class="card-title"><i class="tim-icons icon-puzzle-10 text-primary"></i>Cálculo</h3>
+							</div>
+							<div class="card-body">
+								<div class="col-lg-6">
+									<div id="set_head"></div>
+									<div id="set_chest"></div>
+									<div id="set_hands"></div>
+									<div id="set_legs"></div>
+									<div id="set_foot"></div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -161,18 +193,12 @@
 				$sidebar = $('.sidebar');
 				$navbar = $('.navbar');
 				$main_panel = $('.main-panel');
-
 				$full_page = $('.full-page');
-
 				$sidebar_responsive = $('body > .navbar-collapse');
 				sidebar_mini_active = true;
 				white_color = false;
-
 				window_width = $(window).width();
-
 				$('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function () {
-					var $btn = $(this);
-
 					if (sidebar_mini_active == true) {
 						$('body').removeClass('sidebar-mini');
 						sidebar_mini_active = false;
@@ -194,38 +220,47 @@
 					}, 1000);
 				});
 
-				$('.switch-change-color input').on("switchChange.bootstrapSwitch", function () {
-					var $btn = $(this);
 
-					if (white_color == true) {
-
-						$('body').addClass('change-background');
-						setTimeout(function () {
-							$('body').removeClass('change-background');
-							$('body').removeClass('white-content');
-						}, 900);
-						white_color = false;
-					} else {
-
-						$('body').addClass('change-background');
-						setTimeout(function () {
-							$('body').removeClass('change-background');
-							$('body').addClass('white-content');
-						}, 900);
-
-						white_color = true;
+				/// VALORES SETS
+				var sage = {
+					physical: 15,
+					elemental: 85,
+					head: {
+						weight: 1.2
+					},
+					chest: {
+						weight: 1.8
+					},
+					hands: {
+						weight: 0.9
+					},
+					legs: {
+						weight: 1.2
+					},
+					foot: {
+						weight: 0.9
 					}
+				};
+				var duelist = {
+					physical: 23,
+					elemental: 77,
+					head: {
+						weight: 2
+					},
+					chest: {
+						weight: 3
+					},
+					hands: {
+						weight: 1.5
+					},
+					legs: {
+						weight: 2
+					},
+					foot: {
+						weight: 1.5
+					}
+				};
 
-
-				});
-
-				$('.light-badge').click(function () {
-					$('body').addClass('white-content');
-				});
-
-				$('.dark-badge').click(function () {
-					$('body').removeClass('white-content');
-				});
 			});
 		});
 	</script>
