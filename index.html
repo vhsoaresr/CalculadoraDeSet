@@ -373,20 +373,20 @@
 					$('#set > [data-part="' + part + '"] > td > img').attr("src", event.target.src);
 
 					$('#set > [data-part="' + part + '"] > .weight').html(weight);
-
 					$('#set > [data-part="' + part + '"] > .physical').html(physical + '%');
 					$('#set > [data-part="' + part + '"] > .elemental').html(elemental + '%');
 
-					$('#set > [data-part="' + part + '"]').data('percent', { weight: weight, physical: physical, elemental: elemental });
-
+					$('#set > [data-part="' + part + '"]').data('weight', weight );
+					$('#set > [data-part="' + part + '"]').data('physical', physical);
+					$('#set > [data-part="' + part + '"]').data('elemental', elemental);
 
 					var parts = $('#set > tr');
 					var total = { w: 0, p: 0, e: 0 };
 
 					for (var i in parts) {
-						total.w += Number(parts[i].dataset.weight);
-						total.p += Number(parts[i].dataset.physical);
-						total.e += Number(parts[i].dataset.elemental);
+						total.w += Number($(parts[i]).data('weight'));
+						total.p += Number($(parts[i]).data('physical'));
+						total.e += Number($(parts[i]).data('elemental'));
 					}
 
 					total.p = total.p / 5;
