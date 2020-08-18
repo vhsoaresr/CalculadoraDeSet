@@ -296,6 +296,17 @@
 											<td class="elemental">
 											</td>
 										</tr>
+										<tr>
+											<td colspan="4">
+												<div id="seuSetEsta"></div>
+												<div class="progress" style="margin: 10px;">
+													<div id="progressLeve" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+													<div id="progressNormal" class="progress-bar bg-info" role="progressbar" style="width: 0%"></div>
+													<div id="progressPesado" class="progress-bar" role="progressbar" style="width: 0%"></div>
+												</div>
+												<div>Leve &lt;17.40 | Normal &lt;32 | Pesado &gt;32</div>
+											</td>
+										</tr>
 									</tfoot>
 								</table>
 							</div>
@@ -398,6 +409,29 @@
 						$('#total > tr > .weight').html(total.w);
 						$('#total > tr > .physical').html(total.p + '%');
 						$('#total > tr > .elemental').html(total.e + '%');
+
+						var pesoLeve = total.w;
+						var pesoNormal = 0;
+						var pesoPesado = 0;
+
+						var pesoText = 'Leve';
+
+						if (total.w > 17.4) {
+							pesoLeve = 17.4;
+							pesoNormal = total.w - pesoLeve;
+							pesoText = 'Normal';
+
+							if (total.w > 32) {
+								pesoNormal = 32 - pesoLeve;
+								pesoPesado = total.w - pesoNormal
+								pesoText = 'Pesado';
+							}
+						}
+
+						$('#seuSetEsta').html('Seu set está ' + pesoText);
+						$("#progressLeve").css('width', (pesoLeve * 2) + '%');
+						$("#progressNormal").css('width', (pesoNormal * 2) + '%');
+						$("#progressPesado").css('width', (pesoPesado * 2) + '%');
 					}
 				});
 
