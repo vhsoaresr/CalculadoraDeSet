@@ -414,17 +414,17 @@
 						var pesoNormal = 0;
 						var pesoPesado = 0;
 
-						var pesoText = '<p class="text-success">Seu set está Leve</p>';
+						var pesoText = '<p class="text-success font-weight-bold">Seu set está Leve</p>';
 
 						if (total.w > 17.4) {
 							pesoLeve = 17.4;
 							pesoNormal = total.w - pesoLeve;
-							pesoText = '<p class="text-warning">Seu set está Normal</p>';
+							pesoText = '<p class="text-info font-weight-bold">Seu set está Normal</p>';
 
 							if (total.w > 32) {
 								pesoNormal = 32 - pesoLeve;
 								pesoPesado = total.w - (pesoNormal + pesoLeve);
-								pesoText = '<p class="text-danger">Seu set está Pesado</p>';
+								pesoText = '<p class="text-danger font-weight-bold">Seu set está Pesado</p>';
 							}
 						}
 

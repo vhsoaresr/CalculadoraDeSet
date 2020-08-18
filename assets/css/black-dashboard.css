@@ -38,7 +38,7 @@
 	--success: #00f2c3;
 	--info: #1d8cf8;
 	--warning: #ff8d72;
-	--danger: #fd5d93;
+	--danger: #941919;
 	--light: #adb5bd;
 	--dark: #212529;
 	--default: #344675;
@@ -2854,8 +2854,8 @@ fieldset:disabled a.btn {
 
 .btn-danger {
 	color: #ffffff;
-	background-color: #fd5d93;
-	border-color: #fd5d93;
+	background-color: #941919;
+	border-color: #941919;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -2873,8 +2873,8 @@ fieldset:disabled a.btn {
 	.btn-danger.disabled,
 	.btn-danger:disabled {
 		color: #ffffff;
-		background-color: #fd5d93;
-		border-color: #fd5d93;
+		background-color: #941919;
+		border-color: #941919;
 	}
 
 	.btn-danger:not(:disabled):not(.disabled):active,
@@ -3306,14 +3306,14 @@ fieldset:disabled a.btn {
 		}
 
 .btn-outline-danger {
-	color: #fd5d93;
-	border-color: #fd5d93;
+	color: #941919;
+	border-color: #941919;
 }
 
 	.btn-outline-danger:hover {
 		color: #ffffff;
-		background-color: #fd5d93;
-		border-color: #fd5d93;
+		background-color: #941919;
+		border-color: #941919;
 	}
 
 	.btn-outline-danger:focus,
@@ -3323,7 +3323,7 @@ fieldset:disabled a.btn {
 
 	.btn-outline-danger.disabled,
 	.btn-outline-danger:disabled {
-		color: #fd5d93;
+		color: #941919;
 		background-color: transparent;
 	}
 
@@ -3331,8 +3331,8 @@ fieldset:disabled a.btn {
 	.btn-outline-danger:not(:disabled):not(.disabled).active,
 	.show > .btn-outline-danger.dropdown-toggle {
 		color: #ffffff;
-		background-color: #fd5d93;
-		border-color: #fd5d93;
+		background-color: #941919;
+		border-color: #941919;
 	}
 
 		.btn-outline-danger:not(:disabled):not(.disabled):active:focus,
@@ -5655,7 +5655,7 @@ a.badge-warning.focus {
 
 .badge-danger {
 	color: #ffffff;
-	background-color: #fd5d93;
+	background-color: #941919;
 }
 
 a.badge-danger:hover,
@@ -5890,7 +5890,7 @@ a.badge-darker.focus {
 	}
 
 .alert-danger {
-	color: #fd5d93;
+	color: #941919;
 	background-color: #fd77a4;
 	border-color: #fd77a4;
 }
@@ -7272,7 +7272,7 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-	background-color: #fd5d93 !important;
+	background-color: #941919 !important;
 }
 
 a.bg-danger:hover,
@@ -7417,7 +7417,7 @@ button.bg-darker:focus {
 }
 
 .border-danger {
-	border-color: #fd5d93 !important;
+	border-color: #941919 !important;
 }
 
 .border-light {
@@ -12472,7 +12472,7 @@ a.text-warning:focus {
 }
 
 .text-danger {
-	color: #fd5d93 !important;
+	color: #941919 !important;
 }
 
 a.text-danger:hover,
@@ -13589,14 +13589,14 @@ a.text-darker:focus {
 	}
 
 .btn-danger {
-	background: #fd5d93;
-	background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
-	background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
-	background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
-	background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93);
+	background: #941919;
+	background-image: -webkit-linear-gradient(to bottom left, #941919, #ec250d, #941919);
+	background-image: -o-linear-gradient(to bottom left, #941919, #ec250d, #941919);
+	background-image: -moz-linear-gradient(to bottom left, #941919, #ec250d, #941919);
+	background-image: linear-gradient(to bottom left, #941919, #ec250d, #941919);
 	background-size: 210% 210%;
 	background-position: top right;
-	background-color: #fd5d93;
+	background-color: #941919;
 	transition: all 0.15s ease;
 	box-shadow: none;
 	color: #ffffff;
@@ -13616,10 +13616,10 @@ a.text-darker:focus {
 	.btn-danger.active:focus,
 	.btn-danger.active:hover {
 		background-color: #ec250d !important;
-		background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-		background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-		background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-		background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+		background-image: linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+		background-image: -webkit-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+		background-image: -o-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+		background-image: -moz-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
 		color: #ffffff;
 		box-shadow: none;
 	}
@@ -13660,13 +13660,13 @@ a.text-darker:focus {
 	fieldset[disabled] .btn-danger.focus,
 	fieldset[disabled] .btn-danger:active,
 	fieldset[disabled] .btn-danger.active {
-		background-color: #fd5d93;
-		border-color: #fd5d93;
+		background-color: #941919;
+		border-color: #941919;
 	}
 
 	.btn-danger.btn-simple {
-		color: #fd5d93;
-		border-color: #fd5d93;
+		color: #941919;
+		border-color: #941919;
 		background: transparent;
 	}
 
@@ -13674,15 +13674,15 @@ a.text-darker:focus {
 		.btn-danger.btn-simple:focus,
 		.btn-danger.btn-simple:active,
 		.btn-danger.btn-simple:not(:disabled):not(.disabled):active {
-			color: #fd5d93;
-			border-color: #fd5d93;
+			color: #941919;
+			border-color: #941919;
 			background-color: transparent !important;
 			background-image: none !important;
 			box-shadow: none;
 		}
 
 		.btn-danger.btn-simple.active {
-			border-color: #fd5d93 !important;
+			border-color: #941919 !important;
 		}
 
 			.btn-danger.btn-simple.active:hover,
@@ -13690,17 +13690,17 @@ a.text-darker:focus {
 			.btn-danger.btn-simple.active:active,
 			.btn-danger.btn-simple.active:not(:disabled):not(.disabled):active {
 				color: #ffffff;
-				border-color: #fd5d93;
-				background-image: linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-				background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-				background-image: -o-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
-				background-image: -moz-linear-gradient(to bottom left, #fd5d93, #ec250d, #fd5d93) !important;
+				border-color: #941919;
+				background-image: linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+				background-image: -webkit-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+				background-image: -o-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
+				background-image: -moz-linear-gradient(to bottom left, #941919, #ec250d, #941919) !important;
 				background-color: #ec250d !important;
 				box-shadow: none;
 			}
 
 	.btn-danger.btn-link {
-		color: #fd5d93;
+		color: #941919;
 	}
 
 		.btn-danger.btn-link:hover,
@@ -13790,7 +13790,7 @@ a.text-darker:focus {
 	}
 
 	.btn-neutral.btn-danger {
-		color: #fd5d93;
+		color: #941919;
 	}
 
 		.btn-neutral.btn-danger:hover,
@@ -15169,7 +15169,7 @@ img {
 }
 
 .modal.modal-danger .modal-content {
-	background-color: #fd5d93;
+	background-color: #941919;
 	color: #ffffff;
 }
 
@@ -15709,7 +15709,7 @@ img {
 }
 
 .modal .modal-header .close {
-	color: #fd5d93;
+	color: #941919;
 	text-shadow: none;
 }
 
@@ -15865,7 +15865,7 @@ img {
 	}
 
 	.navbar.bg-danger {
-		background-color: #fd5d93 !important;
+		background-color: #941919 !important;
 	}
 
 	.navbar .navbar-brand {
@@ -15900,7 +15900,7 @@ img {
 	}
 
 .notification {
-	background: #fd5d93;
+	background: #941919;
 	color: #ffffff;
 	border-radius: 0.875rem;
 	height: 6px;
@@ -15911,7 +15911,7 @@ img {
 	font-weight: 800;
 	top: 10px;
 	right: 10px;
-	border: 1px solid #fd5d93;
+	border: 1px solid #941919;
 }
 
 .navbar-nav li {
@@ -16625,12 +16625,12 @@ p {
 		}
 
 	.blockquote.blockquote-danger {
-		border-color: #fd5d93;
-		color: #fd5d93;
+		border-color: #941919;
+		color: #941919;
 	}
 
 		.blockquote.blockquote-danger small {
-			color: #fd5d93;
+			color: #941919;
 		}
 
 	.blockquote.blockquote-white {
@@ -16690,7 +16690,7 @@ hr {
 }
 
 .table > tbody > tr.table-danger > td {
-	background-color: #fd5d93;
+	background-color: #941919;
 }
 
 .table .img-wrapper {
