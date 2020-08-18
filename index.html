@@ -396,17 +396,17 @@
 
 						for (var i = 0; i < parts.length; i++) {
 							if ($(parts[i]).data('weight'))
-								total.w += (Number($(parts[i]).data('weight'))).toFixed(2);
+								total.w += Number($(parts[i]).data('weight'));
 							if ($(parts[i]).data('physical'))
-								total.p += (Number($(parts[i]).data('physical'))).toFixed(2);
+								total.p += Number($(parts[i]).data('physical'));
 							if ($(parts[i]).data('elemental'))
-								total.e += (Number($(parts[i]).data('elemental'))).toFixed(2);
+								total.e += Number($(parts[i]).data('elemental'));
 						}
 
 						total.p = total.p / 5;
 						total.e = total.e / 5;
 
-						$('#total > tr > .weight').html(total.w);
+						$('#total > tr > .weight').html((total.w).toFixed(2));
 						$('#total > tr > .physical').html(total.p + '%');
 						$('#total > tr > .elemental').html(total.e + '%');
 
