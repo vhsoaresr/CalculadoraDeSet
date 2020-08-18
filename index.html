@@ -414,21 +414,21 @@
 						var pesoNormal = 0;
 						var pesoPesado = 0;
 
-						var pesoText = 'Leve';
+						var pesoText = '<p class="text-success">Seu set está Leve</p>';
 
 						if (total.w > 17.4) {
 							pesoLeve = 17.4;
 							pesoNormal = total.w - pesoLeve;
-							pesoText = 'Normal';
+							pesoText = '<p class="text-warning">Seu set está Normal</p>';
 
 							if (total.w > 32) {
 								pesoNormal = 32 - pesoLeve;
-								pesoPesado = total.w - pesoNormal
-								pesoText = 'Pesado';
+								pesoPesado = total.w - (pesoNormal + pesoLeve);
+								pesoText = '<p class="text-danger">Seu set está Pesado</p>';
 							}
 						}
 
-						$('#seuSetEsta').html('Seu set está ' + pesoText);
+						$('#seuSetEsta').html(pesoText);
 						$("#progressLeve").css('width', (pesoLeve * 2) + '%');
 						$("#progressNormal").css('width', (pesoNormal * 2) + '%');
 						$("#progressPesado").css('width', (pesoPesado * 2) + '%');
